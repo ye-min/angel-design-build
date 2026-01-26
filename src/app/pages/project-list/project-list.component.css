@@ -1,0 +1,158 @@
+.project-list-container {
+    width: 60%;
+    max-width: 1600px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-row {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Alternating layout: Odd rows (1st, 3rd...) Image-Text, Even rows (2nd, 4th...) Text-Image */
+.project-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-image-box,
+.project-info-box {
+    flex: 0 0 50%;
+    /* Strictly equal 50% width */
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.project-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-row:hover .project-image-box img {
+    transform: scale(1.05);
+}
+
+.project-info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6% 8%;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.project-row:hover .project-info-box {
+    background-color: #f0f0f0;
+}
+
+.project-info-box h3 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 12px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    /* Text Truncation */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-info-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    font-weight: 300;
+
+    /* Multi-line Truncation */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    /* Show max 4 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-list-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.project-list-logo img {
+    width: 320px;
+    height: 320px;
+    object-fit: contain;
+}
+
+/* Media Queries at the bottom to ensure correct override */
+@media screen and (max-width: 1200px) {
+    .project-list-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-list-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .project-row,
+    .project-row:nth-child(even) {
+        flex-direction: column !important;
+    }
+
+    .project-image-box,
+    .project-info-box {
+        flex: 0 0 100%;
+        aspect-ratio: auto;
+    }
+
+    .project-image-box {
+        aspect-ratio: 1 / 1;
+    }
+
+    .project-info-box {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .project-info-box h3 {
+        font-size: 16px;
+        white-space: normal;
+        /* Allow title to wrap on small screens */
+        margin-bottom: 10px;
+    }
+
+    .project-info-box p {
+        font-size: 13px;
+        -webkit-line-clamp: unset;
+        /* Remove truncation to adapt to text length */
+        line-clamp: unset;
+        display: block;
+    }
+}
+
+@media (min-width: 2000px) {
+    .project-list-container {
+        max-width: 2200px;
+    }
+}
+
+@media (min-width: 3000px) {
+    .project-list-container {
+        max-width: 3200px;
+    }
+}

@@ -1,0 +1,135 @@
+.layout {
+  min-height: 100vh;
+  background: #fff;
+}
+
+nz-header {
+  background: #fff;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  /* Optional subtle shadow */
+  height: 60px;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 15px;
+  object-fit: contain;
+}
+
+.site-title {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.header-menu.desktop-menu {
+  line-height: 60px;
+  border-bottom: none;
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  nz-header {
+    padding: 0 20px;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .site-title {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .logo-img {
+    height: 30px;
+    margin-right: 10px;
+  }
+}
+
+.inner-content {
+  background: #fff;
+  padding: 16px;
+  min-height: 280px;
+}
+
+nz-footer {
+  text-align: center;
+  background: #fff;
+  color: #999;
+  font-size: 12px;
+  padding: 20px;
+}
+
+/* Override Zorro menu item padding if desired */
+::ng-deep .ant-menu-item {
+  padding: 0 20px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+::ng-deep .ant-menu-horizontal {
+  border-bottom: none;
+}
+
+/* 容器：确保水平居中，并与上方内容及下方页脚保持间距 */
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  /* 上下留白，可根据视觉效果调整 */
+  background: #fff;
+}
+
+/* Logo 图片：强制 320x320 尺寸 */
+.large-footer-logo {
+  width: 320px;
+  height: 320px;
+  object-fit: contain;
+  /* 保持图片比例不被拉伸 */
+  display: block;
+}
+
+/* 如果 inner-content 有最小高度限制，确保内容撑开 */
+.inner-content {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 60px - 70px);
+  /* 视口高度减去 header 和 footer 的高度 */
+}
+
+/* 确保 router-outlet 的内容排在上面，Logo 始终在最下面 */
+router-outlet+* {
+  margin-top: auto;
+}

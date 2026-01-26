@@ -1,0 +1,48 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo">
+      <a routerLink="/" class="logo-link">
+        <span class="site-title">{{ siteTitle$ | async }}</span>
+      </a>
+    </div>
+    <ul nz-menu nzTheme="light" nzMode="horizontal" class="header-menu desktop-menu">
+      <li nz-menu-item nzMatchRouter>
+        <a routerLink="/projects">PROJECTS</a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a routerLink="/profile">PROFILE</a>
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a routerLink="/contact">CONTACT</a>
+      </li>
+    </ul>
+
+    <button nz-button nzType="text" class="mobile-menu-btn" (click)="toggleDrawer()">
+      <i nz-icon nzType="menu"></i>
+    </button>
+
+  </nz-header>
+  <nz-drawer [nzVisible]="isDrawerVisible" nzPlacement="right" nzTitle="MENU" (nzOnClose)="toggleDrawer()">
+    <ng-container *nzDrawerContent>
+      <ul nz-menu nzTheme="light" nzMode="vertical" class="mobile-menu">
+        <li nz-menu-item nzMatchRouter (click)="toggleDrawer()">
+          <a routerLink="/projects">PROJECTS</a>
+        </li>
+        <li nz-menu-item nzMatchRouter (click)="toggleDrawer()">
+          <a routerLink="/profile">PROFILE</a>
+        </li>
+        <li nz-menu-item nzMatchRouter (click)="toggleDrawer()">
+          <a routerLink="/contact">CONTACT</a>
+        </li>
+      </ul>
+    </ng-container>
+  </nz-drawer>
+
+  <nz-content>
+    <div class="inner-content">
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+
+  <nz-footer>Robert Gurney Architect ©2026 Implemented with Angular & NG-ZORRO</nz-footer>
+</nz-layout>

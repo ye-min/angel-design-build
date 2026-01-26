@@ -1,0 +1,31 @@
+<div class="contact-container" *ngIf="contact$ | async as contact">
+    <div class="contact-hero">
+        <img [src]="contact.imageUrl" alt="Studio Image" class="hero-image">
+    </div>
+
+    <div class="contact-details">
+        <div class="contact-section">
+            <h4>Address</h4>
+            <p *ngFor="let line of contact.address">{{ line }}</p>
+        </div>
+
+        <div class="contact-section">
+            <h4>Phone & Fax</h4>
+            <p><strong>T</strong> {{ contact.phone }}</p>
+            <p><strong>F</strong> {{ contact.fax }}</p>
+        </div>
+
+        <div class="contact-section">
+            <h4>Email</h4>
+            <div *ngFor="let item of contact.emails" class="email-item">
+                <span class="label">{{ item.label }}:</span>
+                <a [href]="'mailto:' + item.email">{{ item.email }}</a>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h4>Social</h4>
+            <p><strong>WeChat</strong> {{ contact.wechat }}</p>
+        </div>
+    </div>
+</div>

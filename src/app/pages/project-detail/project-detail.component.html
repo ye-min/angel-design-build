@@ -1,0 +1,19 @@
+<div class="detail-container" *ngIf="project">
+    <div class="sub-header-row">
+        <button (click)="goBack()" class="back-link">
+            <span class="arrow">&#10094;</span> BACK TO PROJECTS
+        </button>
+        <h2 class="project-title-display">{{ project.title }}</h2>
+    </div>
+
+    <!-- Redundant controls-top removed as we have a better back button now -->
+
+    <div class="project-gallery">
+        <div *ngFor="let item of project.gallery" class="gallery-item">
+            <div class="image-wrapper">
+                <img [src]="item.image" class="detail-image" alt="Project Image">
+            </div>
+            <p class="caption" *ngIf="item.caption">{{ item.caption }}</p>
+        </div>
+    </div>
+</div>

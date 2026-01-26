@@ -1,0 +1,17 @@
+<div class="profile-container" *ngIf="profile$ | async as profile">
+    <nz-row [nzGutter]="60">
+        <nz-col [nzXs]="24" [nzMd]="12">
+            <div class="profile-text">
+                <p *ngFor="let paragraph of profile.bio">{{ paragraph }}</p>
+            </div>
+        </nz-col>
+        <nz-col [nzXs]="24" [nzMd]="12">
+            <div class="profile-books">
+                <div *ngFor="let book of profile.books" class="book-item">
+                    <!-- Using nz-image for books too for consistency -->
+                    <img nz-image [nzSrc]="book.imageUrl" [alt]="book.title" />
+                </div>
+            </div>
+        </nz-col>
+    </nz-row>
+</div>

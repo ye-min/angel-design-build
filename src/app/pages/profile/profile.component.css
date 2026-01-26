@@ -1,0 +1,26 @@
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.profile-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.profile-text p {
+    margin-bottom: 20px;
+}
+
+.profile-books {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.book-item img {
+    max-width: 100%;
+    border: 1px solid #eee;
+}

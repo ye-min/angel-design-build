@@ -1,0 +1,88 @@
+.contact-container {
+    width: 60%;
+    max-width: 1600px;
+    margin: 40px auto;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 1200px) {
+    .contact-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        width: 95%;
+        margin-top: 20px;
+    }
+}
+
+.contact-hero {
+    width: 100%;
+    margin-bottom: 60px;
+    overflow: hidden;
+    background: #f9f9f9;
+}
+
+.hero-image {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-details {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+.contact-section h4 {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.contact-section p,
+.contact-section .email-item {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+    font-weight: 300;
+    margin-bottom: 4px;
+}
+
+.contact-section strong {
+    font-weight: 400;
+    color: #333;
+    margin-right: 10px;
+}
+
+.contact-section a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-section a:hover {
+    color: #000;
+}
+
+.label {
+    margin-right: 8px;
+    color: #333;
+}
