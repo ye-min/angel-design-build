@@ -1,0 +1,116 @@
+{
+    "title": "Angel Design Build",
+    "logo": "image/icon/logo.png",
+    "projectList": [
+        {
+            "title": "Murphy Ranch",
+            "image": "image/project/murphy-ranch/Murphy-Ranch-architecutre-patio-sunrise-yoann.jpg",
+            "description": "Located in the Santa Monica Mountains, Murphy Ranch is a modern transformation of a mid-century residence. The project emphasizes a seamless connection between indoor spaces and the rugged natural landscape.",
+            "link": "murphy-ranch",
+            "gallery": [
+                {
+                    "image": "image/project/murphy-ranch/existing-house-interior.jpg",
+                    "caption": "Front view of the Murphy Ranch project showcasing modern design."
+                },
+                {
+                    "image": "image/project/murphy-ranch/existing-house.jpg",
+                    "caption": "Interior living space with open floor plan and natural lighting."
+                },
+                {
+                    "image": "image/project/murphy-ranch/Murphy-Ranch-architecutre-rendering.jpg",
+                    "caption": "Kitchen area featuring state-of-the-art appliances and finishes."
+                },
+                {
+                    "image": "image/project/murphy-ranch/Murphy-Ranch-architecutre-viewpoint-terrace-sunrise.jpg",
+                    "caption": "Kitchen area featuring state-of-the-art appliances and finishes."
+                },
+                {
+                    "image": "image/project/murphy-ranch/Murphy-Ranch-diagram.jpg",
+                    "caption": "Kitchen area featuring state-of-the-art appliances and finishes."
+                },
+                {
+                    "image": "image/project/murphy-ranch/Murphy-Ranch-first-floor.jpg",
+                    "caption": "Kitchen area featuring state-of-the-art appliances and finishes."
+                },
+                {
+                    "image": "image/project/murphy-ranch/Murphy-Ranch-interior-dining-room.jpg",
+                    "caption": "Kitchen area featuring state-of-the-art appliances and finishes."
+                },
+                {
+                    "image": "image/project/murphy-ranch/Murphy-Ranch-interior-living-room.jpg",
+                    "caption": "Kitchen area featuring state-of-the-art appliances and finishes."
+                },
+                {
+                    "image": "image/project/murphy-ranch/Murphy-Ranch-second-floor.jpg",
+                    "caption": "Kitchen area featuring state-of-the-art appliances and finishes."
+                }
+            ]
+        },
+        {
+            "title": "Pine Mountain",
+            "image": "image/project/pine-mountain/la-vacation-pine-mountain-cabine-yoann.jpg",
+            "description": "Nestled in the high desert of California, Pine Mountain is a retreat designed for tranquility. The minimalist architecture frames breathtaking views while providing a warm and inviting atmosphere.",
+            "link": "sunset-villa",
+            "gallery": [
+                {
+                    "image": "image/project/pine-mountain/la-vacation-pine-mountain-diagram.jpg",
+                    "caption": "Exterior view of Sunset Villa during golden hour."
+                },
+                {
+                    "image": "image/project/pine-mountain/la-vacation-pine-mountain-enlarged.jpg",
+                    "caption": "Spacious patio area perfect for outdoor gatherings."
+                },
+                {
+                    "image": "image/project/pine-mountain/la-vacation-pine-mountain-floor-plans.jpg",
+                    "caption": "Luxurious bedroom with panoramic views."
+                },
+                {
+                    "image": "image/project/pine-mountain/la-vacation-pine-mountain-living-interior.jpg",
+                    "caption": "Luxurious bedroom with panoramic views."
+                },
+                {
+                    "image": "image/project/pine-mountain/la-vacation-pine-mountain-site-plan.jpg",
+                    "caption": "Luxurious bedroom with panoramic views."
+                }
+            ]
+        }
+    ],
+    "profile": {
+        "bio": [
+            "Robert M. Gurney, FAIA Architect is a firm dedicated to the design of modern, thoughtfully detailed residential and commercial projects.",
+            "The firm's work has been published locally, nationally, and internationally in over three hundred journals, magazines, and books.",
+            "Our process involves a check and balance system where we strictly adhere to the client's budget and timeframe."
+        ],
+        "books": [
+            {
+                "title": "Modern Order",
+                "imageUrl": "https://placehold.co/300x400/333/fff?text=Modern+Order"
+            },
+            {
+                "title": "Example Book 2",
+                "imageUrl": "https://placehold.co/300x400/333/fff?text=Book+Two"
+            }
+        ]
+    },
+    "contact": {
+        "address": [
+            "Robert M. Gurney, FAIA, Architect",
+            "5110 ½ MacArthur Blvd. NW",
+            "Washington, DC 20016"
+        ],
+        "phone": "202.244.7733",
+        "fax": "202.244.1166",
+        "emails": [
+            {
+                "label": "General",
+                "email": "rmg@robertgurneyarchitect.com"
+            },
+            {
+                "label": "Careers",
+                "email": "careers@robertgurneyarchitect.com"
+            }
+        ],
+        "wechat": "RMG_Architect",
+        "imageUrl": "image/project/pine-mountain/la-vacation-pine-mountain-diagram.jpg"
+    }
+}
