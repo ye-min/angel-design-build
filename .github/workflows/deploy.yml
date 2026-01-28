@@ -24,10 +24,11 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm install
-          npm run build -- --configuration production
+          npm run build -- --configuration production --base-href /
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/angel-design-build
           branch: gh-pages
+          cname: angeldesignbuild.us
