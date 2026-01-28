@@ -94,23 +94,23 @@
     },
     "contact": {
         "address": [
-            "Robert M. Gurney, FAIA, Architect",
-            "5110 ½ MacArthur Blvd. NW",
-            "Washington, DC 20016"
+            "",
+            "",
+            ""
         ],
-        "phone": "202.244.7733",
-        "fax": "202.244.1166",
+        "phone": "",
+        "fax": "",
         "emails": [
             {
                 "label": "General",
-                "email": "rmg@robertgurneyarchitect.com"
+                "email": ""
             },
             {
                 "label": "Careers",
-                "email": "careers@robertgurneyarchitect.com"
+                "email": ""
             }
         ],
-        "wechat": "RMG_Architect",
+        "wechat": "",
         "imageUrl": "image/project/pine-mountain/la-vacation-pine-mountain-diagram.jpg"
     }
 }
