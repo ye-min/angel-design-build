@@ -71,6 +71,11 @@
                 {
                     "image": "image/project/pine-mountain/la-vacation-pine-mountain-site-plan.jpg",
                     "caption": "Luxurious bedroom with panoramic views."
+                },
+                {
+                    "type": "instagram",
+                    "instagramUrl": "https://www.instagram.com/reel/DR5fX09km2e/",
+                    "caption": "Project showcase on Instagram"
                 }
             ]
         }

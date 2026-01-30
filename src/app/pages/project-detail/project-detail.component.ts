@@ -2,6 +2,8 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContentService, Project } from '../../core/services/content.service';
 
+declare var instgrm: any;
+
 @Component({
     selector: 'app-project-detail',
     templateUrl: './project-detail.component.html',
@@ -24,6 +26,13 @@ export class ProjectDetailComponent implements OnInit {
                     this.project = project;
                     if (!this.project) {
                         this.router.navigate(['/projects']);
+                    } else {
+                        // Wait for DOM to update then process Instagram embeds
+                        setTimeout(() => {
+                            if (typeof instgrm !== 'undefined') {
+                                instgrm.Embeds.process();
+                            }
+                        }, 100);
                     }
                 });
             }

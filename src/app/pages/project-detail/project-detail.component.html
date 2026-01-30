@@ -10,9 +10,19 @@
 
     <div class="project-gallery">
         <div *ngFor="let item of project.gallery" class="gallery-item">
-            <div class="image-wrapper">
-                <img [src]="item.image" class="detail-image" alt="Project Image">
-            </div>
+            <ng-container [ngSwitch]="item.type || 'image'">
+                <!-- Image Type -->
+                <div *ngSwitchCase="'image'" class="image-wrapper">
+                    <img [src]="item.image" class="detail-image" alt="Project Image">
+                </div>
+
+                <!-- Instagram Type -->
+                <div *ngSwitchCase="'instagram'" class="instagram-wrapper">
+                    <blockquote class="instagram-media" [attr.data-instgrm-permalink]="item.instagramUrl"
+                        data-instgrm-version="14">
+                    </blockquote>
+                </div>
+            </ng-container>
             <p class="caption" *ngIf="item.caption">{{ item.caption }}</p>
         </div>
     </div>

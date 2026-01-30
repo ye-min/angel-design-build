@@ -116,3 +116,15 @@
     letter-spacing: 1px;
     max-width: 80%;
 }
+
+.instagram-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.instagram-wrapper .instagram-media {
+    margin: 0 !important;
+    width: 100% !important;
+}

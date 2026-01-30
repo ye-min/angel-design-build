@@ -3,8 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
 export interface GalleryItem {
-  image: string;
+  image?: string;
   caption: string;
+  type?: 'image' | 'instagram';
+  instagramUrl?: string;
 }
 
 export interface Project {
