@@ -25,6 +25,7 @@ jobs:
         run: |
           npm install
           npm run build -- --configuration production --base-href /
+          cp dist/angel-design-build/index.html dist/angel-design-build/404.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
