@@ -8,6 +8,7 @@ import { ProjectListComponent } from './pages/project-list/project-list.componen
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { FamilyComponent } from './pages/family/family.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -47,7 +48,8 @@ registerLocaleData(zh);
     ProjectListComponent,
     ProjectDetailComponent,
     ProfileComponent,
-    ContactComponent
+    ContactComponent,
+    FamilyComponent
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

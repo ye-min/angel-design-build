@@ -1,0 +1,105 @@
+.family-container {
+    width: 60%;
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 40px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), z-index 0s;
+}
+
+.polaroid-frame {
+    background-color: #fff;
+    padding: 15px 15px 45px 15px;
+    /* Thicker bottom padding like a real print */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid #eee;
+    width: 350px;
+    /* Base width */
+}
+
+.polaroid-frame img,
+.polaroid-frame ::ng-deep .ant-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: zoom-in;
+}
+
+.polaroid-frame img {
+    filter: none;
+}
+
+/* Randomized scattered effect using rotations */
+.gallery-item:nth-child(4n+1) {
+    transform: rotate(-2deg);
+}
+
+.gallery-item:nth-child(4n+2) {
+    transform: rotate(3deg) translateY(10px);
+}
+
+.gallery-item:nth-child(4n+3) {
+    transform: rotate(-1.5deg) translateY(-5px);
+}
+
+.gallery-item:nth-child(4n+4) {
+    transform: rotate(2.5deg);
+}
+
+/* Interaction: Pick up the photo */
+.gallery-item:hover {
+    transform: rotate(0deg) scale(1.08) translateY(-10px);
+    z-index: 100;
+}
+
+.polaroid-frame:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1200px) {
+    .family-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .family-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .polaroid-frame {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px 10px 30px 10px;
+    }
+
+    .gallery-grid {
+        gap: 30px 0;
+    }
+
+    .gallery-item {
+        transform: rotate(0deg) !important;
+        /* Flatten for mobile scroll */
+        margin-bottom: 20px;
+    }
+}

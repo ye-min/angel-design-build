@@ -37,6 +37,7 @@ export interface ProjectData {
   projectList: Project[];
   profile: Profile;
   contact: Contact;
+  familyPhotos: string[];
 }
 
 @Injectable({
@@ -53,25 +54,31 @@ export class ContentService {
 
   getProjects(): Observable<Project[]> {
     return this.getProjectData().pipe(
-      map(data => data.projectList)
+      map((data: ProjectData) => data.projectList)
     );
   }
 
   getProject(link: string): Observable<Project | undefined> {
     return this.getProjects().pipe(
-      map(projects => projects.find(p => p.link === link))
+      map((projects: Project[]) => projects.find((p: Project) => p.link === link))
     );
   }
 
   getProfile(): Observable<Profile> {
     return this.getProjectData().pipe(
-      map(data => data.profile)
+      map((data: ProjectData) => data.profile)
     );
   }
 
   getContact(): Observable<Contact> {
     return this.getProjectData().pipe(
-      map(data => data.contact)
+      map((data: ProjectData) => data.contact)
+    );
+  }
+
+  getFamilyPhotos(): Observable<string[]> {
+    return this.getProjectData().pipe(
+      map((data: ProjectData) => data.familyPhotos)
     );
   }
 }

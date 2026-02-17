@@ -1,0 +1,10 @@
+<div class="family-container">
+    <h1 class="page-title">FAMILY</h1>
+    <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let photo of photos">
+            <div class="polaroid-frame">
+                <img nz-image [nzSrc]="photo" alt="Family Photo" loading="lazy">
+            </div>
+        </div>
+    </div>
+</div>

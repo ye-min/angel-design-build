@@ -117,5 +117,22 @@
         ],
         "wechat": "",
         "imageUrl": "image/project/pine-mountain/la-vacation-pine-mountain-diagram.jpg"
-    }
+    },
+    "familyPhotos": [
+        "image/project/family/DSC00137a.png",
+        "image/project/family/DSC00139a.png",
+        "image/project/family/DSC00140a.png",
+        "image/project/family/DSC00146a.png",
+        "image/project/family/DSC00148a.png",
+        "image/project/family/DSC00164a.png",
+        "image/project/family/DSC00165a.png",
+        "image/project/family/DSC00167a.png",
+        "image/project/family/DSC00171a.png",
+        "image/project/family/DSC00173a.png",
+        "image/project/family/DSC00178a.png",
+        "image/project/family/DSC00186a.png",
+        "image/project/family/DSC00191a.png",
+        "image/project/family/DSC00195a.png",
+        "image/project/family/DSC00200a.png"
+    ]
 }
