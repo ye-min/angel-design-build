@@ -134,5 +134,11 @@
         "image/project/family/DSC00191a.png",
         "image/project/family/DSC00195a.png",
         "image/project/family/DSC00200a.png"
+    ],
+    "videoList": [
+        {
+            "title": "ADU Introduction",
+            "videoUrl": "video/test1.mp4"
+        }
     ]
 }
