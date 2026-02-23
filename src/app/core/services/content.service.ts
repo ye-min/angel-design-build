@@ -17,6 +17,11 @@ export interface Project {
   gallery: GalleryItem[];
 }
 
+export interface Video {
+  title: string;
+  videoUrl: string;
+}
+
 export interface Profile {
   bio: string[];
   books: { title: string; imageUrl: string }[];
@@ -38,6 +43,7 @@ export interface ProjectData {
   profile: Profile;
   contact: Contact;
   familyPhotos: string[];
+  videoList: Video[];
 }
 
 @Injectable({
@@ -79,6 +85,12 @@ export class ContentService {
   getFamilyPhotos(): Observable<string[]> {
     return this.getProjectData().pipe(
       map((data: ProjectData) => data.familyPhotos)
+    );
+  }
+
+  getVideos(): Observable<Video[]> {
+    return this.getProjectData().pipe(
+      map((data: ProjectData) => data.videoList)
     );
   }
 }

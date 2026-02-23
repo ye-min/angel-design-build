@@ -1,0 +1,37 @@
+<div class="video-page-container">
+    <div class="video-grid">
+        <div *ngFor="let video of videos" class="video-card" (click)="openVideo(video, tplVideoModal)"
+            (mouseenter)="onMouseEnter(video, previewVideo)" (mouseleave)="onMouseLeave(previewVideo)">
+            <div class="thumbnail-wrapper">
+                <video #previewVideo muted loop playsinline preload="metadata" class="preview-video visible">
+                    <source [src]="video.videoUrl" type="video/mp4">
+                </video>
+
+                <div class="play-overlay" *ngIf="hoveredVideo !== video">
+                    <i nz-icon nzType="play-circle" nzTheme="outline"></i>
+                </div>
+            </div>
+            <div class="video-info">
+                <h3>{{ video.title }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #tplVideoModal>
+    <div class="modal-video-container" *ngIf="currentVideo">
+        <video controls autoplay class="video-player">
+            <source [src]="currentVideo.videoUrl" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="share-section">
+            <div class="url-label">Video URL:</div>
+            <div class="url-copy-box">
+                <span class="video-url">{{ getShareUrl(currentVideo.videoUrl) }}</span>
+                <button nz-button nzType="link" (click)="copyUrl(getShareUrl(currentVideo.videoUrl))">
+                    <i nz-icon nzType="copy"></i> Copy
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-template>

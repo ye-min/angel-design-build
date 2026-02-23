@@ -7,6 +7,7 @@ import { ProjectDetailComponent } from './pages/project-detail/project-detail.co
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FamilyComponent } from './pages/family/family.component';
+import { VideoComponent } from './pages/video/video.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'projects', component: ProjectListComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'family', component: FamilyComponent },
+      { path: 'video', component: VideoComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'project/:title', component: ProjectDetailComponent }
     ]

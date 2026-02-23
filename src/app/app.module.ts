@@ -9,6 +9,7 @@ import { ProjectDetailComponent } from './pages/project-detail/project-detail.co
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FamilyComponent } from './pages/family/family.component';
+import { VideoComponent } from './pages/video/video.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,6 +24,7 @@ import { NzImageModule } from 'ng-zorro-antd/image';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDrawerModule } from 'ng-zorro-antd/drawer';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 registerLocaleData(zh);
 
@@ -40,7 +42,8 @@ registerLocaleData(zh);
     NzImageModule,
     NzIconModule,
     NzButtonModule,
-    NzDrawerModule
+    NzDrawerModule,
+    NzModalModule
   ],
   declarations: [
     AppComponent,
@@ -49,7 +52,8 @@ registerLocaleData(zh);
     ProjectDetailComponent,
     ProfileComponent,
     ContactComponent,
-    FamilyComponent
+    FamilyComponent,
+    VideoComponent
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]
