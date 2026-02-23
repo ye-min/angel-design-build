@@ -137,8 +137,16 @@
     ],
     "videoList": [
         {
-            "title": "ADU Introduction",
-            "videoUrl": "video/test1.mp4"
+            "title": "ADU Introduction 1",
+            "videoUrl": "video/adu-introduction-1.mp4"
+        },
+        {
+            "title": "ADU Introduction 2",
+            "videoUrl": "video/adu-introduction-2.mp4"
+        },
+        {
+            "title": "ADU Introduction 3",
+            "videoUrl": "video/adu-introduction-3.mp4"
         }
     ]
 }
