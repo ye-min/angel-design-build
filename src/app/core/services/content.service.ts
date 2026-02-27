@@ -20,6 +20,7 @@ export interface Project {
 export interface Video {
   title: string;
   videoUrl: string;
+  link: string;
 }
 
 export interface Profile {
