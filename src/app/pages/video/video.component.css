@@ -89,9 +89,23 @@
     background: #000;
 }
 
+.share-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: #f9f9f9;
+}
+
 .share-section {
     padding: 20px;
-    background: #f9f9f9;
+}
+
+.share-section:first-child {
+    padding-right: 10px;
+}
+
+.share-section:last-child {
+    padding-left: 10px;
 }
 
 .url-label {
@@ -126,5 +140,14 @@
 
     .video-page-container {
         margin: 20px auto;
+    }
+
+    .share-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .share-section:first-child,
+    .share-section:last-child {
+        padding: 15px 20px;
     }
 }

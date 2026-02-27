@@ -24,22 +24,24 @@
             <source [src]="currentVideo.videoUrl" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <!--<div class="share-section">
-            <div class="url-label">Video URL:</div>
-            <div class="url-copy-box">
-                <span class="video-url">{{ getShareUrl(currentVideo.videoUrl) }}</span>
-                <button nz-button nzType="link" (click)="copyUrl(getShareUrl(currentVideo.videoUrl))">
-                    <i nz-icon nzType="copy"></i> Copy
-                </button>
+        <div class="share-grid">
+            <div class="share-section">
+                <div class="url-label">Video URL:</div>
+                <div class="url-copy-box">
+                    <span class="video-url">{{ getShareUrl(currentVideo.videoUrl) }}</span>
+                    <button nz-button nzType="link" (click)="copyUrl(getShareUrl(currentVideo.videoUrl))">
+                        <i nz-icon nzType="copy"></i> Copy
+                    </button>
+                </div>
             </div>
-        </div>-->
-        <div class="share-section">
-            <div class="url-label">Video URL:</div>
-            <div class="url-copy-box">
-                <span class="video-url">{{ currentVideo.link }}</span>
-                <button nz-button nzType="link" (click)="copyUrl(currentVideo.link)">
-                    <i nz-icon nzType="copy"></i> Copy
-                </button>
+            <div class="share-section">
+                <div class="url-label">Youtube Link:</div>
+                <div class="url-copy-box">
+                    <span class="video-url">{{ currentVideo.link }}</span>
+                    <button nz-button nzType="link" (click)="copyUrl(currentVideo.link)">
+                        <i nz-icon nzType="copy"></i> Copy
+                    </button>
+                </div>
             </div>
         </div>
     </div>
