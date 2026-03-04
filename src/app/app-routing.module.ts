@@ -6,7 +6,7 @@ import { ProjectListComponent } from './pages/project-list/project-list.componen
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { FamilyComponent } from './pages/family/family.component';
+// import { FamilyComponent } from './pages/family/family.component';
 import { VideoComponent } from './pages/video/video.component';
 
 const routes: Routes = [
@@ -17,7 +17,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'projects', pathMatch: 'full' },
       { path: 'projects', component: ProjectListComponent },
       { path: 'profile', component: ProfileComponent },
-      { path: 'family', component: FamilyComponent },
+      // { path: 'family', component: FamilyComponent },
       { path: 'video', component: VideoComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'project/:title', component: ProjectDetailComponent }
